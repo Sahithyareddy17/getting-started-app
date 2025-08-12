@@ -8,6 +8,7 @@ RUN node -v && yarn --version
 COPY package.json yarn.lock ./
 
 RUN yarn install --production
-COPY ..
-CMD ["node", "src/index.js"]
+COPY . .
 EXPOSE 3000
+CMD ["node", "src/index.js"]
+
