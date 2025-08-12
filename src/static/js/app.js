@@ -99,7 +99,7 @@ onChange={(e) => setNewItem(e.target.value)}
                 />
             </Form.Group>
             <Button type="submit" disabled={submitting || !newItem.trim()}>
-                {submitting ? 'Adding...' : 'Add Item'}
+                {submitting ? 'Adding...' : 'Add'}
             </Button>
         </Form>
     );
