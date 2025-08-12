@@ -1,4 +1,3 @@
-cat > Dockerfile <<'EOF'
 # syntax=docker/dockerfile:1
 FROM node:lts-alpine
 WORKDIR /app
