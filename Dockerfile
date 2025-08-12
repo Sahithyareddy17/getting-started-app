@@ -4,7 +4,7 @@ WORKDIR /app
 RUN apk add --no-cache python3 make g++
 
 # Enable Yarn (needed for Node>=16 with Corepack)
-RUN corepark enable && corepack prepare yarn@1.22.22 --activate
+RUN corepack enable && corepack prepare yarn@1.22.22 --activate
 # Copy only dependency manifests first
 COPY package.json yarn.lock ./
 
