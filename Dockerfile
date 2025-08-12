@@ -1,10 +1,9 @@
-FROM node:lts-alpine
+FROM node:18-alpine
 WORKDIR /app
-# Install build toold(needed if you have native modules)
-RUN apk add --no-cache python3 make g++
-
-# Enable Yarn (needed for Node>=16 with Corepack)
+# Tools for native builds + Yarn via Corepack
+RUN apk add --no-cache python3 make g++ bash
 RUN corepack enable && corepack prepare yarn@1.22.22 --activate
+RUN node -v && yarn --version
 # Copy only dependency manifests first
 COPY package.json yarn.lock ./
 
