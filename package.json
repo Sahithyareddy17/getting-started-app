@@ -1,4 +1,3 @@
-cat > package.json <<'JSON'
 {
   "name": "getting-started-app",
   "version": "1.0.0",
